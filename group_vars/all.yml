@@ -1,0 +1,15 @@
+ZOAU: "/u/ibmuser/temp1/zoau"
+environment_vars:
+  ZOAU_ROOT: '{{ZOAU}}'
+  ZOAU_HOME: '{{ZOAU}}'  
+  PYTHONPATH: '{{ZOAU}}/lib' 
+  
+  LIBPATH: '/lib:/usr/lib:/usr/lpp/IBM/aie/zdnn/lib:/usr/lpp/java/J8.0_64/bin/classic:/usr/lpp/java/J8.0_64/bin/j9vm:/usr/lpp/java/J8.0_64/lib/s390x:/usr/lpp/IBM/izoda/spark/spark24x/lib:{{ZOAU}}/lib:/var/rocket  /miniconda/lib:/u/ibmuser/temp1/python3.9/usr/lpp/IBM/cyp/v3r9/pyz/lib'                                                                                                             
+  PATH: '/usr/lpp/IBM/aln/v2r4/iml-zostools/bin:/bin:{{ZOAU}}/bin:/var/rocket/miniconda/bin:/u/ibmuser/temp1/python3.9/usr/lpp/IBM/cyp/v3r9/pyz/bin:/usr/lpp/java/J8.0_64/bin:/usr/lpp/IBM/aln/v2r4/nodejs/bin:/usr  /lpp/IBM/cobol/igyv6r4/bin'
+  _CEE_RUNOPTS: "FILETAG(AUTOCVT,AUTOTAG) POSIX(ON)"
+  _TAG_REDIR_ERR: "txt"
+  _TAG_REDIR_IN: "txt"
+  _TAG_REDIR_OUT: "txt"
+  LANG: "C"
+
+   

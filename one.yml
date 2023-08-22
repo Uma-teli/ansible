@@ -1,0 +1,18 @@
+---
+- hosts : all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: no
+  vars:
+  environment: "{{environment_vars}}"
+
+
+  tasks:
+    - name: Copy PDS member to a new PDS . Replace if it already exists
+      zos_copy:
+        src: dbb.zen.cobol(cbscsrg)
+        dest: dbb.zen.test.cobol
+        remote_src: true
+        force: true
+
+        

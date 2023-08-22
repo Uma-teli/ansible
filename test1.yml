@@ -1,0 +1,23 @@
+---
+- hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: no
+  environment: "{{ environment_vars }}"
+  
+
+  tasks:
+    - name: Find all data sets with HLQ 'CBS.ZCON.*'
+      zos_find:
+        patterns:
+          - CBS.ZCON.*
+                        
+              
+    # - name: Create a Squential dataset if does not exist
+    #  zos_data_set:
+    #    name: USER.DATA1
+    #    type: SEQ
+    #    state: present
+        
+        
+     

@@ -1,0 +1,8 @@
+---
+- name: Test ZOAU Connection
+  hosts: all
+  gather_facts: no
+  
+  tasks:
+  - name: Ensure z/OS system is reachable
+    raw: echo "ZOAU connection test successful."

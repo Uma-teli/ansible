@@ -1,0 +1,20 @@
+---
+- hosts: all
+  collections:
+    - ibm.ibm_zos_core
+  gather_facts: no
+  vars:
+  environment: "{{ environment_vars }}"
+
+  tasks:
+    - name: Execute TSO command
+      zos_tso_command:
+        commands:
+          - TIME
+    - name: Submit JCL in a PDSE member
+      zos_job_submit:
+        src: CBS.ZCON.JCL(BINDPKG)
+        location: DATA_SET
+    
+    
+      
